@@ -1,0 +1,29 @@
+server:
+  port: 8091
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  datasource:
+    username: Celfocus
+    password: Celfocus
+    url: jdbc:postgresql://localhost:5432/Celfocus
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+rabbitmq:
+  exchanges:
+    orders: orders.exchange
+  queues:
+    orders: orders.queue
+  routing-keys:
+    orders-inventory: orders.inventory.routing-key

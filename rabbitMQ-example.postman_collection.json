@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "4158c24c-23fb-433f-96af-976722218596",
+		"name": "rabbitMQ-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19188676"
+	},
+	"item": [
+		{
+			"name": "Create new order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"total\": \"3075$\",\r\n    \"address\": \"123 Dublin\",\r\n    \"orderItems\": [\r\n        {\r\n            \"name\":\"Iphone 15 pro max\",\r\n            \"quantity\": 5,\r\n            \"price\": \"1050$\",\r\n            \"productId\": 1\r\n        },\r\n        {\r\n            \"name\":\"Raspberry pi 5\",\r\n            \"quantity\": 5,\r\n            \"price\": \"450$\",\r\n            \"productId\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/v1/orders"
+			},
+			"response": [
+				{
+					"name": "Create new order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total\": \"3075$\",\r\n    \"address\": \"123 Dublin\",\r\n    \"orderItems\": [\r\n        {\r\n            \"name\":\"Iphone 15 pro max\",\r\n            \"quantity\": 5,\r\n            \"price\": \"1050$\",\r\n            \"productId\": 1\r\n        },\r\n        {\r\n            \"name\":\"Raspberry pi 5\",\r\n            \"quantity\": 5,\r\n            \"price\": \"450$\",\r\n            \"productId\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/api/v1/orders"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"total\": \"3075$\",\n    \"status\": \"CREATED\",\n    \"address\": \"123 Dublin\",\n    \"orderItems\": [\n        {\n            \"id\": 1,\n            \"name\": \"Iphone 15 pro max\",\n            \"quantity\": 5,\n            \"price\": \"1050$\",\n            \"productId\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Raspberry pi 5\",\n            \"quantity\": 5,\n            \"price\": \"450$\",\n            \"productId\": 2\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update order",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"total\": \"3075$\",\r\n    \"address\": \"123 Dublin\",\r\n    \"status\": \"CANCELLED\",\r\n    \"orderItems\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Iphone 15 pro max\",\r\n            \"quantity\": 5,\r\n            \"price\": \"1050$\",\r\n            \"productId\": 1\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Raspberry pi 5\",\r\n            \"quantity\": 5,\r\n            \"price\": \"450$\",\r\n            \"productId\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/v1/orders/1"
+			},
+			"response": [
+				{
+					"name": "Update order",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"total\": \"3075$\",\r\n    \"address\": \"123 Dublin\",\r\n    \"status\": \"CANCELLED\",\r\n    \"orderItems\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Iphone 15 pro max\",\r\n            \"quantity\": 5,\r\n            \"price\": \"1050$\",\r\n            \"productId\": 1\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Raspberry pi 5\",\r\n            \"quantity\": 5,\r\n            \"price\": \"450$\",\r\n            \"productId\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/api/v1/orders/1"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "237"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"total\": \"3075$\",\n    \"status\": \"CANCELLED\",\n    \"address\": \"123 Dublin\",\n    \"orderItems\": [\n        {\n            \"id\": 1,\n            \"name\": \"Iphone 15 pro max\",\n            \"quantity\": 5,\n            \"price\": \"1050$\",\n            \"productId\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Raspberry pi 5\",\n            \"quantity\": 5,\n            \"price\": \"450$\",\n            \"productId\": 2\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List all the orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8090/api/v1/orders"
+			},
+			"response": [
+				{
+					"name": "List all the orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8090/api/v1/orders"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"total\": \"3075$\",\n        \"status\": \"CANCELLED\",\n        \"address\": \"123 Dublin\",\n        \"orderItems\": [\n            {\n                \"id\": 1,\n                \"name\": \"Iphone 15 pro max\",\n                \"quantity\": 5,\n                \"price\": \"1050$\",\n                \"productId\": 1\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Raspberry pi 5\",\n                \"quantity\": 5,\n                \"price\": \"450$\",\n                \"productId\": 2\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8091/api/v1/products/1"
+			},
+			"response": [
+				{
+					"name": "Delete order",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8091/api/v1/products/1"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
