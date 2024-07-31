@@ -170,4 +170,4 @@ Developing a message-based application using RabbitMQ facilitates asynchronous c
 Note that this blog only focuses on the basic concepts of RabbitMQ and the best practices you should use while developing an application. You can always refer to [official documentation](https://www.rabbitmq.com/tutorials/amqp-concepts) for further details.
 
 ### An example of RabbitMQ with Spring Boot 
-- [RabbitMQ with Spring Boot]()
+- [RabbitMQ with Spring Boot](https://github.com/Ibrah-salama/springboot-rabbitmq-example)
